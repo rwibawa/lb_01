@@ -1,69 +1,45 @@
 # lb_01
+Learn Loopback framework.
+* [Get Started](https://loopback.io/doc/en/lb4/Getting-started.html)
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
-
-## Install dependencies
-
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
-
+# 1. Setup
 ```sh
-yarn install
+$ nvm ls
+->     v16.13.1
+default -> lts/gallium (-> v16.13.1)
+$ npm i -g @loopback/cli
+$ lb4 app
+? Project name: lb_01
+? Project description: workspace_js
+? Project root directory: lb_01
+? Application class name: Lb_01Application
+? Select features to enable in the project Enable eslint, Enable prettier, Enable mocha, Enable loopbackBuild, Enable vscode, Enable dock
+er, Enable repositories, Enable services
+? Yarn is available. Do you prefer to use it by default? Yes
+Application lb_01 was created in lb_01.
+
+Next steps:
+
+$ cd lb_01
+$ yarn start
+
+$ git init
+$ git remote add origin git@github.com:rwibawa/lb_01.git
+$ git add -A
+$ git status
+$ git commit -m "init repo"
+$ git push -u origin master
 ```
 
-## Run the application
-
+## 2. Add Controller
 ```sh
-yarn start
+$ lb4 controller
+? Controller class name: hello
+Controller Hello will be created in src/controllers/hello.controller.ts
+
+? What kind of controller would you like to generate? Empty Controller
+   create src/controllers/hello.controller.ts
+   update src/controllers/index.ts
+
+Controller Hello was/were created in src/controllers
 ```
-
-You can also run `node .` to skip the build step.
-
-Open http://127.0.0.1:3000 in your browser.
-
-## Rebuild the project
-
-To incrementally build the project:
-
-```sh
-yarn run build
-```
-
-To force a full build by cleaning up cached artifacts:
-
-```sh
-yarn run rebuild
-```
-
-## Fix code style and formatting issues
-
-```sh
-yarn run lint
-```
-
-To automatically fix such issues:
-
-```sh
-yarn run lint:fix
-```
-
-## Other useful commands
-
-- `yarn run migrate`: Migrate database schemas for models
-- `yarn run openapi-spec`: Generate OpenAPI spec into a file
-- `yarn run docker:build`: Build a Docker image for this application
-- `yarn run docker:run`: Run this application inside a Docker container
-
-## Tests
-
-```sh
-yarn test
-```
-
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
-
-[![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
